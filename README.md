@@ -21,3 +21,12 @@ The macros can be called not in the same module in which the type was defined.
 Providing here two variations - using define as, and define as computed. 
 The define as computed is better in handling numeric type (variants of int and uint), and the define-as
 are better in handling enums. 
+
+Files:
+- e_util_type_min_max.e : the macros implementation
+- type_min_max_usage_ex.e : usage example of the macro
+- types_def_usage_ex.e : type definition file, used in the example
+
+Running the example:
+
+  specman -c 'load type_min_max_usage_ex.e; test; show cover monitor.ended; sys.print_types()'
