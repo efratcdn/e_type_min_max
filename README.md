@@ -6,6 +6,8 @@ e Macros for Type min / max values
 * Modified    : Novemeber 2017
 * Description :
 
+More examples in https://github.com/efratcdn/spmn-e-utils
+
 The macros implemented in e_util_type_min_max.e can be used as is, or as an example - you 
 can download, and edit per your requirements/methdology.
 
