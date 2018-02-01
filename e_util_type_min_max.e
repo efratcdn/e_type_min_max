@@ -30,7 +30,10 @@ Example       : See usage example e_util_type_min_max_usage_ex.e
 //
   
   
-define as, the better implementation when the type are numeric
+define as, handling all types
+
+numeric types will be "caught" by the Define-As-Computed, 
+all other types are rejected by the DAC and handled by this define-as
   
 
 <'
