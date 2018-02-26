@@ -17,12 +17,16 @@ The macros MIN_VALUE and MAX_VALUE return the min/max value of a type.
 RANGE_SIZE returns the size of the range of the type, how many values there are of this type.
 In the example, this is used for defining buckets for a coverage item of type integer.
               
-The macros can be called not in the same module in which the type was defined. 
+The macros cannot be called in the same module in which the type was defined. 
 
 
 Providing here two variations - using define as, and define as computed. 
-The define as computed is better in handling numeric type (variants of int and uint), and the define-as
-are better in handling enums. 
+The define as computed is better in handling numeric type (variants of int and uint).
+The define-as are better in handling enums. 
+enum type can be extended in a later module, so the define-as, perforing the min/max 
+calculation during the run - gives the accurate result. The define-as-computed performs 
+the calculation when the file is loaded, if a type is extended in a later module -
+the min/max values will be wrong.
 
 Files:
 - e_util_type_min_max.e : the macros implementation
